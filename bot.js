@@ -7,10 +7,11 @@ const YouTube = require('simple-youtube-api');
 const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
 const queue = new Map();
 const client = new Discord.Client();
- 
+
 ////////////////////////////////
  
 client.on('ready', () => {
+client.channels.get("500977914133610497").join();
     console.log(`Logged in as ${client.user.tag}!`);
     client.user.setStatus("dnd")
 });
