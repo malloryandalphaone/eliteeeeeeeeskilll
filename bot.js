@@ -11,13 +11,10 @@ const client = new Discord.Client();
 ////////////////////////////////
  
 client.on('ready', () => {
-client.channels.get("500977914133610497").join();
     console.log(`Logged in as ${client.user.tag}!`);
     client.user.setStatus("dnd")
-});
-  client.on('ready', () => {
-     client.user.setActivity("Music Elite Skill",{type: 'LISTENING'});
- 
+    client.user.setGame("Music Elite Skill (r)", "https://twitch.tv/idk");
+    client.channels.get("500977914133610497").join();
 });
  
 const prefix = "!!"
