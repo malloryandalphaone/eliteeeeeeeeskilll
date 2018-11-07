@@ -13,11 +13,11 @@ const client = new Discord.Client();
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     client.user.setStatus("dnd")
-    client.user.setGame("Music Elite Skill (r)", "https://twitch.tv/idk");
+    client.user.setGame("Music Elite Skill \"m\"", "https://twitch.tv/idk");
     client.channels.get("500977914133610497").join();
 });
  
-const prefix = "!!"
+const prefix = "m"
 client.on('message', async msg => { 
     if (msg.author.bot) return undefined;
     if (!msg.content.startsWith(prefix)) return undefined;
@@ -202,7 +202,7 @@ function play(guild, song) {
 
 client.on('message', msg => {
 
-    if (msg.content == '!!EventS') {
+    if (msg.content == 'mMstr') {
         if (msg.member.voiceChannel) {
 
      if (msg.member.voiceChannel.joinable) {
@@ -214,7 +214,7 @@ client.on('message', msg => {
 
 client.on('message', async message => {
             if(!message.channel.guild) return;
-             if (message.content.startsWith("!!setstatus")) {
+             if (message.content.startsWith("msetstatus")) {
 let args = message.content.split(' ').slice(1).join(' ');
             let sigMessage = await args;
             
