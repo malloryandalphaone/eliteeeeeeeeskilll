@@ -13,8 +13,8 @@ const client = new Discord.Client();
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     client.user.setStatus("dnd")
-    client.user.setGame("Music Elite Skill \"m\"", "https://twitch.tv/idk");
-    client.channels.get("500977914133610497").join();
+    client.user.setGame("Music Elite Skill", "https://twitch.tv/idk");
+    client.channels.get("514076661948612619").join();
 });
  
 const prefix = "m"
